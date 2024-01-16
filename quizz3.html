@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coupe du Monde Quiz</title>
+  <link rel="stylesheet" href="css/quiz.css">
+  <style>
+    body {
+      background-image: url('images/R.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      width:100em;
+      height:100em;
+    }
+  </style>
+</head>
+<body>
+  <div id="quiz-container">
+    <h1>Coupe du Monde Quiz</h1>
+
+    <div class="question" id="question1">
+      <p>1. En quelle année a eu lieu la première Coupe du Monde de la FIFA ?</p>
+      <input type="radio" name="q1" value="a"> a) 1930
+      <input type="radio" name="q1" value="b"> b) 1950
+      <input type="radio" name="q1" value="c"> c) 1966
+    </div>
+
+    <div class="question" id="question2">
+      <p>2. Quel pays a remporté le plus grand nombre de Coupes du Monde ?</p>
+      <input type="radio" name="q2" value="a"> a) Brésil
+      <input type="radio" name="q2" value="b"> b) Allemagne
+      <input type="radio" name="q2" value="c"> c) Italie
+    </div>
+      <div class="question" id="question3">
+        <p>3. Quel pays a remporté la premiére  Coupedu Monde ?</p>
+        <input type="radio" name="q3" value="a"> a) Brésil
+        <input type="radio" name="q3" value="b"> b) Allemagne
+        <input type="radio" name="q3" value="c"> c) uruguay
+      </div>
+      <div class="question" id="question4">
+        <p>4.Quel joueur détient le record du plus grand nombre de buts marqués en une seule édition de la Coupe du Monde ? ?</p>
+        <input type="radio" name="q4" value="a"> a) Lionel Messi
+        <input type="radio" name="q4" value="b"> b)Just Fontaine
+        <input type="radio" name="q4" value="c"> c) Cristiano Ronaldo
+      </div>
+      <div class="question" id="question5">
+        <p>5.Quel stade emblématique a accueilli la finale de la Coupe du Monde 2014 au Brésil ? </p>
+        <input type="radio" name="q5" value="a"> a) Estadio Maracana
+        <input type="radio" name="q5" value="b"> b)Wembley Stadium
+        <input type="radio" name="q5" value="c"> c)Camp Nou
+      </div>
+      <div class="question" id="question6">
+        <p>6. Qui est le joueur à avoir remporté le Ballon d'Or en remportant la Coupe du Monde la même année ?</p>
+        <input type="radio" name="q6" value="a"> a) Cristiano Ronaldo
+        <input type="radio" name="q6" value="b"> b) Zinedine Zidane
+        <input type="radio" name="q6" value="c"> c) Fabio Cannavaro
+      </div>
+      <div class="question" id="question7">
+        <p>7. Combien d'équipes participent à la phase finale de la Coupe du Monde de la FIFA ?</p>
+        <input type="radio" name="q7" value="a"> a) 32
+        <input type="radio" name="q7" value="b"> b) 48
+        <input type="radio" name="q7" value="c"> c) 16
+      </div>
+      <div class="question" id="question8">
+        <p>8. Quel joueur a marqué le "Coup du Monde" ("Goal of the Century") lors de la Coupe du Monde 1986 ?</p>
+        <input type="radio" name="q8" value="a"> a) Pelé
+        <input type="radio" name="q8" value="b"> b) Diego Maradona
+        <input type="radio" name="q8" value="c"> c) Johan Cruyff
+      </div>
+      <div class="question" id="question9">
+        <p>9. Quelle équipe nationale a remporté le plus grand nombre de victoires en Coupe du Monde ?</p>
+        <input type="radio" name="q9" value="a"> a) Brésil
+        <input type="radio" name="q9" value="b"> b) Allemagne
+        <input type="radio" name="q9" value="c"> c) Italie
+      </div>
+    <button onclick="calculateScore()">Soumettre</button>
+    <div id="result"></div>
+  
+
+  <script>
+    function calculateScore() {
+      var score = 0;
+      var q1Answer = document.querySelector('input[name="q1"]:checked');
+      if (q1Answer && q1Answer.value === "a") {
+        score++;
+      }
+      var q2Answer = document.querySelector('input[name="q2"]:checked');
+      if (q2Answer && q2Answer.value === "a") {
+        score++;
+      }
+      var q3Answer = document.querySelector('input[name="q3"]:checked');
+      if (q3Answer && q3Answer.value === "c") {
+        score++;
+      }
+      var q4Answer = document.querySelector('input[name="q4"]:checked');
+      if (q4Answer && q4Answer.value === "b") {
+        score++;
+      }
+      var q5Answer = document.querySelector('input[name="q5"]:checked');
+      if (q5Answer && q5Answer.value === "a") {
+        score++;
+      }
+      var q6Answer = document.querySelector('input[name="q6"]:checked');
+      if (q6Answer && q6Answer.value === "c") {
+        score++;
+      }
+      var q7Answer = document.querySelector('input[name="q7"]:checked');
+      if (q7Answer && q5Answer.value === "a") {
+        score++;
+      }
+      var q8Answer = document.querySelector('input[name="q8"]:checked');
+      if (q8Answer && q8Answer.value === "b") {
+        score++;
+      }
+      var q9Answer = document.querySelector('input[name="q9"]:checked');
+      if (q9Answer && q9Answer.value === "a") {
+        score++;
+      }
+      var resultContainer = document.getElementById("result");
+      resultContainer.innerHTML = "Votre score : " + score + " sur 9.";
+    }
+  </script>
+  </div>
+  
+
+</body>
+</html>
